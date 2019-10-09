@@ -32,6 +32,7 @@
 #define SLINK_DEVICE_CDP_CX3L   0x92 // Send commands to a Sony CDP-CX jukebox for CD Player 3 to drive number <=200
 #define SLINK_DEVICE_CDP_CX3H   0x95 // Send commands to a Sony CDP-CX jukebox for CD Player 3 to drive disc number > 200
 #define SLINK_DEVICE_CDP_CXALL  0x97 // Send commands to a Sony CDP-CX jukebox for all CD players 1, 2, 3 (200 or less disc players only)
+#define SLINK_DEVICE_TC_WE435   0xA4 // Send commands to a Sony TC-WE435 cassette player/recorder
 
 // List of commands for AMP/RECEIVER
 #define SLINK_CMD_AMP_MUTE_ON          6
@@ -71,6 +72,22 @@
 #define SLINK_CMD_CD_PAUSE    3 // Toggle Pause
 #define SLINK_CMD_CD_NEXT     8 // Next Track
 #define SLINK_CMD_CD_PREV     9 // Previous Track
+
+// List of commands for cassette player/recorder
+// commands for deck A (playback only):
+#define SLINK_CMD_TC_STOP_A     65
+#define SLINK_CMD_TC_WIND_FWD_A 74
+#define SLINK_CMD_TC_WIND_REV_A 75
+#define SLINK_CMD_TC_PLAY_FWD_A 76
+#define SLINK_CMD_TC_PLAY_REV_A 77
+#define SLINK_CMD_TC_STOP_B     1
+// commands for deck A (record and playback):
+#define SLINK_CMD_TC_PAUSE_B    2
+#define SLINK_CMD_TC_RECORD_B   7
+#define SLINK_CMD_TC_WIND_FWD_B 10
+#define SLINK_CMD_TC_WIND_REV_B 11
+#define SLINK_CMD_TC_PLAY_FWD_B 12
+#define SLINK_CMD_TC_PLAY_REV_B 13
 
 // List of parameters for SLINK_CMD_AMP_SET_INPUT_CHAN
 #define SLINK_CMDP_IN_TUNER   0
